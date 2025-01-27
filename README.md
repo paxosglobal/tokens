@@ -1,6 +1,6 @@
 # Background
 
-This is a project which emerged from the ashes of [MyEtherWallet/ethereum-lists](https://github.com/MyEtherWallet/ethereum-lists) after the split of MyEtherWallet and MyCrypto. For some more context see [this blog post](https://walleth.org/2018/02/15/ethereum-lists).
+This is a project which emerged from the ashes of [MyEtherWallet/ethereum-lists](https://github.com/MyEtherWallet/ethereum-lists) after the split of MyEtherWallet and MyCrypto.
 
 # Tokens
 
@@ -28,7 +28,8 @@ This web tool should help getting the checksum: https://ethsum.netlify.com
 -  `github`:    Where token or project-related code lives.
 -  `community`: Twitter, Reddit, Slack or wherever else people hang out.
 -  `website`:   Official URL of the website.
-
+-  `address_eip1191`: Ethereum (or other chain) address of ERC-20 token, in [EIP-1191](https://github.com/ethereum/EIPs/blob/master/EIPS/eip-1191.md) mixed-case format.
+- `redFlags`: An array containing evidence on why the contract should be treated with caution. Example: `[{"type": "suspicious","comment": "fake scam token","url": "https://some.evidence"}]`
 
 # The assembled lists
 
@@ -38,9 +39,11 @@ This repository has the tokens as single files. This makes it easier for contrib
 
 - [WallETH](https://walleth.org)
 - [MyCrypto](https://mycrypto.com)
+- [MyEtherWallet | MEW](https://myetherwallet.com)
 - [TREZOR](https://trezor.io) - they even [import via IPFS ;-)](https://github.com/trezor/trezor-common/blob/078cf07658a99888adca19e3284864a5354da550/ethereum_tokens-gen.py#L7)
-- [Tokenstation](https://github.com/TripleSpeeder/TokenStation)
-- [pyetherbalance](https://pypi.org/project/pyetherbalance/)
+- [Tokenstation](https://eeder/TokenStation)
+- [pyetherbalance](https://pypi.org/project/pyetherbalance))
+- [rainbow-me/rainbow-token-list](https://github.com/rainbow-me/rainbow-token-list)
 - please let us know when you do (you don't need to but it would be nice!)
 
 # Maintainers

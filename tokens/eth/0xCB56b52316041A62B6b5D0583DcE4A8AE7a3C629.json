@@ -1,0 +1,34 @@
+{
+  "symbol": "CIG",
+  "name": "Cigarette Token",
+  "type": "ERC20",
+  "address": "0xCB56b52316041A62B6b5D0583DcE4A8AE7a3C629",
+  "ens_address": "cigtoken.eth",
+  "decimals": 18,
+  "website": "https://cigtoken.eth.limo",
+  "logo": {
+    "src": "https://raw.githubusercontent.com/0xTycoon/punksceo/76c6e016de451f716500baf449256fd4657e7379/img/logo128.png",
+    "width": "128",
+    "height": "128",
+    "ipfs_hash": "QmTMtMng4RR4TrBvnHCagX88gG2Tk7ou5AnwZmreZBpFsw"
+  },
+  "support": {
+    "email": "",
+    "url": ""
+  },
+  "social": {
+    "blog": "",
+    "chat": "discord.gg/tWTQa2Wsnd",
+    "facebook": "",
+    "forum": "",
+    "github": "https://github.com/0xTycoon/punksceo",
+    "gitter": "",
+    "instagram": "",
+    "linkedin": "",
+    "reddit": "",
+    "slack": "",
+    "telegram": "",
+    "twitter": "https://twitter.com/CigToken",
+    "youtube": ""
+  }
+}

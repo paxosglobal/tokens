@@ -2,7 +2,7 @@
   "symbol": "LOOM",
   "address": "0xA4e8C3Ec456107eA67d3075bF9e3DF3A75823DB0",
   "decimals": 18,
-  "name": "Loom Network",
+  "name": "LOOM",
   "ens_address": "loomnetwork.eth",
   "website": "https://loomx.io",
   "logo": {
@@ -12,8 +12,7 @@
     "ipfs_hash": ""
   },
   "support": {
-    "email": "hello@loomx.io",
-    "url": "https://delegatecall.com/questions?tag=loom"
+    "email": "hello@loomx.io"
   },
   "social": {
     "blog": "https://medium.com/loom-network",
@@ -29,5 +28,11 @@
     "telegram": "https://t.me/loomnetwork",
     "twitter": "https://twitter.com/loomnetwork",
     "youtube": ""
+  },
+  "deprecation": {
+    "new_address": "0x42476F744292107e34519F9c357927074Ea3F75D",
+    "migration_type": "auto",
+    "announcement_url": "https://medium.com/loom-network/loom-token-swap-launch-f9257a4ae066",
+    "time": "2021-03-30T16:03:45Z"
   }
 }

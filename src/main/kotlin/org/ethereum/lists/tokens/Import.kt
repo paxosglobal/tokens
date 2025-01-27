@@ -2,11 +2,11 @@ package org.ethereum.lists.tokens
 
 import com.beust.klaxon.JsonObject
 import com.beust.klaxon.Klaxon
-import org.ethereum.lists.cilib.checkFields
 import org.kethereum.erc55.withERC55Checksum
 import org.kethereum.model.Address
 import java.io.File
 import java.lang.System.exit
+import kotlin.system.exitProcess
 
 fun main(args: Array<String>) {
 
@@ -20,45 +20,39 @@ fun main(args: Array<String>) {
         error("importPath ($importPath) is not a directory")
     }
 
-    importPath.listFiles().forEach { tokenPath ->
-        tokenPath.listFiles().forEach {
-            print("processing " + it.name + " .. ")
-            val array = it.reader ().use { reader ->
+    importPath.listFiles()?.forEach { tokenPath ->
+        tokenPath.listFiles()?.forEach { tokenFile ->
+            print("processing " + tokenFile.name + " .. ")
+            val array = tokenFile.reader ().use { reader ->
                 Klaxon().parseJsonArray(reader).map { it as JsonObject }
             }
             println("contains " + array.size + " entries ")
 
-            array.checkFields(mandatoryFields, optionalFields)
+            array.forEach { element ->
+                element.checkFields(mandatoryFields, optionalFields)
+            }
 
-            val newPath = it.name.substringAfter("-").substringBefore(".")
+            val newPath = tokenFile.name.substringAfter("-").substringBefore(".")
 
             val destinationPath = File(allNetworksTokenDir, newPath)
 
-            if (destinationPath.exists() && !array.isEmpty()) {
+            if (destinationPath.exists() && array.isNotEmpty()) {
 
                 var newCount = 0
                 array.forEach {
                     val trimmedAddress = (it["address"] as String).trim()
 
                     val erc55Hex = Address(trimmedAddress).withERC55Checksum().hex
-                    val jsonFile = File(destinationPath, erc55Hex + ".json")
+                    val jsonFile = File(destinationPath, "$erc55Hex.json")
                     it["address"] = erc55Hex
                     if (!jsonFile.exists()) {
                         println("importing $trimmedAddress")
                         newCount++
                         jsonFile.writeText(it.toJsonString(true))
                     }
-
                 }
                 println("Imported $newCount new entries")
             }
-
-
         }
     }
-}
-
-private fun error(message: String) {
-    println("Error: $message")
-    exit(0)
 }

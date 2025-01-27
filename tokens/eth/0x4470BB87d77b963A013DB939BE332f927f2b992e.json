@@ -2,31 +2,31 @@
   "symbol": "ADX",
   "address": "0x4470BB87d77b963A013DB939BE332f927f2b992e",
   "decimals": 4,
-  "name": "AdEx Network",
+  "name": "AdEx Network (legacy)",
   "ens_address": "",
   "website": "https://www.adex.network",
   "logo": {
-    "src": "",
-    "width": "",
-    "height": "",
+    "src": "https://raw.githubusercontent.com/AdExNetwork/adex-brand/master/logos/Adex-logo500x500px-07.png",
+    "width": "500px",
+    "height": "500px",
     "ipfs_hash": ""
   },
   "support": {
-    "email": "",
-    "url": ""
+    "email": "contactus@adex.network",
+    "url": "https://help.adex.network"
   },
   "social": {
-    "blog": "https://medium.com/the-adex-blog",
+    "blog": "https://www.adex.network/blog",
     "chat": "",
     "facebook": "",
     "forum": "",
-    "github": "https://github.com/AdExBlockchain",
+    "github": "https://github.com/AdExNetwork",
     "gitter": "",
     "instagram": "",
     "linkedin": "",
     "reddit": "https://www.reddit.com/r/AdEx",
     "slack": "",
-    "telegram": "https://t.me/AdExNetwork",
+    "telegram": "",
     "twitter": "https://twitter.com/AdEx_Network",
     "youtube": ""
   }
